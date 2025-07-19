@@ -1,0 +1,12 @@
+#brands {
+    margin: 40px 0;
+}
+
+.brand-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    border: 1px solid #dee0ea;
+    padding: 30px 10px;
+}

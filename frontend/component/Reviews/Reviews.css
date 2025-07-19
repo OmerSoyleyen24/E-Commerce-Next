@@ -1,0 +1,110 @@
+/*! comment item start */
+.tab-panel-reviews .comment-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.tab-panel-reviews .comment-star {
+    display: flex;
+    color: gold;
+    font-size: 12px;
+}
+
+.tab-panel-reviews .comment-list-item {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.tab-panel-reviews .comment-avatar img {
+    border-radius: 50%;
+}
+
+.tab-panel-reviews .comment-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.tab-panel-reviews .comment-meta {
+    font-size: 12px;
+}
+
+.tab-panel-reviews .comment-desc p {
+    font-size: 14px;
+}
+
+/*! comment item end */
+
+/*! comment form start */
+.tab-panel-reviews .review-form-wrapper h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0;
+    border-bottom: 1px solid #dee0ea;
+    padding-bottom: 16px;
+}
+
+.tab-panel-reviews .review-form-wrapper .comment-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.tab-panel-reviews .review-form-wrapper .form-comment {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-size: 14px;
+}
+
+.tab-panel-reviews .comment-notes {
+    font-size: 16px;
+}
+
+.tab-panel-reviews .comment-form-rating {
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.tab-panel-reviews .comment-form-rating .stars {
+    display: flex;
+    column-gap: 10px;
+}
+
+.tab-panel-reviews .comment-form-rating .stars a {
+    padding-right: 10px;
+    margin-top: 10px;
+    transition: .2s ease-in color;
+}
+
+.tab-panel-reviews .comment-form-rating .star.active i {
+    color: gold;
+}
+
+.tab-panel-reviews .comment-form-rating .stars a:hover i {
+    color: gold;
+}
+
+.tab-panel-reviews .comment-form-rating .stars a:not(:last-child) {
+    border-right: 1px solid #dee0ea;
+}
+
+.tab-panel-reviews .comment-form-rating .stars i {
+    color: #dee0ea;
+    font-size: 12px;
+}
+
+.tab-panel-reviews .comment-form-cookies {
+    display: flex;
+    flex-direction: row !important;
+    column-gap: 7px;
+    margin: 10px 0;
+}
+
+.form-submit input {
+    cursor: pointer;
+}
+
+/*! comment form end */

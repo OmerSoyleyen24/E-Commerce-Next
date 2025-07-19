@@ -1,0 +1,64 @@
+.account-page{
+    display: flex;
+}
+
+.account-page h2{
+    margin: 30px 0;
+}
+
+.account-page-list{
+    width: 30%;
+    height: 100vh;
+}
+
+.account-page li{
+    font-size: 1.25rem;
+    margin: 20px 50px;
+}
+
+.user-information{
+    width: 70%;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.user-information .emailPassword{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-information .emailPassword div{
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+}
+
+.user-information div #email{
+    margin: 20px 0;
+}
+
+.buttons{
+    margin-top: 20px;
+    display: flex;
+    column-gap: 20px;
+}
+
+.Address{
+    width: 100%;
+}
+
+.Address div p{
+    margin: 20px 0;
+}
+
+.Address input,
+.Address textarea{
+    width: 100%;
+}

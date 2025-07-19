@@ -1,0 +1,212 @@
+#card {
+    margin: 30px 0;
+}
+
+.card-page-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*! card form start */
+#card .card-form {
+    flex-basis: 60%;
+}
+
+#card .free-progress-bar {
+    border: 1px solid #dee0ea;
+    padding: 20px;
+    width: 100%;
+}
+
+#card .progress-bar-title strong {
+    color: #ee403d;
+}
+
+#card .progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #f2f3f5;
+    border-radius: 10px;
+    margin-top: 8px;
+}
+
+#card .progress-bar .progress {
+    display: inline-block;
+    background-color: #ee403d;
+    width: 50%;
+    height: 6px;
+}
+
+/*! card form end */
+
+/*! table start */
+.card-form table img {
+    width: 60px;
+}
+
+.card-form table> :not(caption)>*>* {
+    padding: 8px 0;
+}
+
+.card-form table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 14px;
+    min-width: 500px;
+}
+
+.card-form table thead th {
+    text-align: start;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-form table .product-quantity,
+.card-form table .product-subtotal {
+    text-align: center;
+}
+
+.card-form tbody {
+    border-top: 1px solid #dee0ea;
+}
+
+.card-form .card-item {
+    border-bottom: 1px solid #dee0ea;
+}
+
+.card-form table tbody {
+    border: 1px solid #dee0ea;
+}
+
+.card-form table tbody .card-image {
+    position: relative;
+}
+
+.card-form table tbody i {
+    position: absolute;
+    top: 2px;
+    left: -6px;
+    background-color: #ee403d;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.actions-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.actions-wrapper .coupon {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.actions-wrapper .coupon input {
+    height: 100%;
+}
+
+/*! table end */
+
+/*! collaterals start */
+.card-collaterals {
+    flex-basis: 27.5%;
+    border: 1px solid #dee0ea;
+    padding: 30px;
+}
+
+.card-collaterals table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.card-collaterals h2 {
+    font-weight: 500;
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+.card-collaterals table tr:nth-child(2) {
+    padding: 100px;
+    height: 80px;
+}
+
+.card-collaterals table th,
+.card-collaterals table td {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-collaterals table tr:not(:last-child) {
+    border-bottom: 1px solid #dee0ea;
+}
+
+.card-collaterals table th {
+    text-align: start;
+    padding: 20px 0 10px 0;
+}
+
+.card-collaterals table td {
+    text-align: end;
+}
+
+.card-collaterals table ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.card-collaterals table ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.card-collaterals table ul label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 5px;
+}
+
+.card-collaterals table ul a {
+    color: #ee403d;
+    font-weight: 500;
+}
+
+.card-collaterals table strong {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.card-collaterals button {
+    margin-top: 30px;
+    width: 100%;
+}
+
+/*! collaterals end */
+
+/*! responsive */
+@media (max-width:768px) {
+    .card-page-wrapper {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .shop-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .actions-wrapper {
+        justify-content: center;
+    }
+}
