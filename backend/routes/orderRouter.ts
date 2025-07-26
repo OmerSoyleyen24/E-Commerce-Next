@@ -1,6 +1,6 @@
 import express, { Request, Response, Router } from "express";
 import Iyzipay from "iyzipay";
-import { verifyTokenMiddleware } from "../jwt";
+import { verifyTokenMiddleware } from "../jwt.js";
 
 const router: Router = express.Router();
 
