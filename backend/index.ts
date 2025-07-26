@@ -1,10 +1,9 @@
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
 import { initDbPool } from "./db";
-
-import userRouter from "./routes/userRouter";
-import accountRouter from "./routes/accountRouter";
-import orderRouter from "./routes/orderRouter";
+import userRouter from './routes/userRouter.js';
+import accountRouter from './routes/accountRouter.js';
+import orderRouter from './routes/orderRouter.js';
 
 const app: Express = express();
 
