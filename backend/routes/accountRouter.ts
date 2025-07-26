@@ -1,6 +1,6 @@
 import express, { Request, Response, Router } from "express";
-import { getDbConnection } from "../db";
-import { verifyTokenMiddleware } from "../jwt";
+import { getDbConnection } from "../db.js";
+import { verifyTokenMiddleware } from "../jwt.js";
 import { RowDataPacket } from "mysql2";
 
 interface AuthenticatedRequest extends Request {
