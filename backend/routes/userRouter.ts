@@ -1,7 +1,7 @@
 import express, { Request, Response, Router } from "express";
 import bcrypt from "bcryptjs";
-import { getDbConnection } from "../db";
-import { generateToken, verifyTokenMiddleware } from "../jwt";
+import { getDbConnection } from "../db.js";
+import { generateToken, verifyTokenMiddleware } from "../jwt.js";
 
 const router: Router = express.Router();
 
