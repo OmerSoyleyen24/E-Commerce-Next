@@ -1,6 +1,6 @@
 import express, { Express, Request, Response } from "express";
 import cors from "cors";
-import { initDbPool } from "./db";
+import { initDbPool } from "./db.js";
 import userRouter from './routes/userRouter.js';
 import accountRouter from './routes/accountRouter.js';
 import orderRouter from './routes/orderRouter.js';
