@@ -17,7 +17,7 @@ const Login = () => {
         }
 
         try {
-            const response = await axios.post("http://localhost:3000/user/login", { email, password, rememberMe });
+            const response = await axios.post("https://e-commerce-next-4uow.onrender.com/user/login", { email, password, rememberMe });
 
             if (response.data && response.data.token) {
                 localStorage.setItem('token', response.data.token);
