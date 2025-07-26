@@ -12,7 +12,8 @@
         "rootDir": "./",
         "resolveJsonModule": true,
         "isolatedModules": true,
-        "noImplicitAny": true
+        "noImplicitAny": true,
+        "types": ["node"]
     },
     "include": [
         "./**/*"
