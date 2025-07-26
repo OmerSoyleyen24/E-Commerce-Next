@@ -16,7 +16,7 @@ const Register = () => {
     setSuccess(false);
 
     try {
-      await axios.post("http://localhost:3000/user/register", {
+      await axios.post("https://e-commerce-next-4uow.onrender.com/user/register", {
         username,
         email,
         password,
