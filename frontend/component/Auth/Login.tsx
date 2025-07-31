@@ -1,12 +1,14 @@
-"use client"
+'use client';
 
 import axios from "axios";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [rememberMe, setRememberMe] = useState(false);
+    const router = useRouter();
 
     const getCheckFormData = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -17,11 +19,21 @@ const Login = () => {
         }
 
         try {
-            const response = await axios.post("https://e-commerce-next-4uow.onrender.com/user/login", { email, password, rememberMe });
+            const response = await axios.post("http://localhost:3000/user/login", {
+                email,
+                password
+            });
 
-            if (response.data && response.data.token) {
-                localStorage.setItem('token', response.data.token);
-                window.location.href = "/";
+            const { token } = response.data;
+
+            console.log("Alınan token:", token);
+
+            if (token) {
+                localStorage.setItem("token", token);
+                axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+                router.refresh();
+                router.push("/");
+
             } else {
                 alert("Giriş başarısız. Token alınamadı.");
             }
