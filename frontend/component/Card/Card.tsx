@@ -1,8 +1,8 @@
 import React from "react";
-import CardProgress from "../CardProgress";
-import CardTable from "../CardTable";
-import CardCoupon from "../CardCoupon";
-import CardTotals from "../CardTotals";
+import CardProgress from "./CardProgress";
+import CardTable from "./CardTable";
+import CardCoupon from "./CardCoupon";
+import CardTotals from "./CardTotals";
 import Policy from "@/component/Policy/Policy";
 import "./Card.css"
 
