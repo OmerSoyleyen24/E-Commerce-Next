@@ -1,5 +1,6 @@
 import express, { Request, Response, Router } from "express";
 import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 import { getDbConnection } from "../db.js";
 import { generateToken, verifyTokenMiddleware } from "../jwt.js";
 
@@ -25,23 +26,36 @@ router.post("/login", async (req: Request, res: Response) => {
 
   try {
     const db = await getDbConnection();
-    const query = "SELECT * FROM users WHERE email = ?";
-    db.execute(query, [email], async (err, results: any) => {
-      if (err) return res.status(500).send({ message: "Sunucu hatası!" });
-      if (!results || results.length === 0)
-        return res.status(401).send({ message: "Hatalı email veya şifre!" });
 
-      const user: User = results[0];
-      const isPasswordValid = await bcrypt.compare(password, user.password);
-      if (!isPasswordValid)
-        return res.status(401).send({ message: "Hatalı email veya şifre!" });
+        const [results] = await db.promise().execute("SELECT * FROM users WHERE email = ?", [email]);
+        console.log("Veritabanı sonucu:", results);
 
-      const token = generateToken({ username: user.username, email: user.email });
-      res.status(200).send({ message: "Başarıyla giriş yapıldı!", token });
-    });
-  } catch (error) {
-    res.status(500).send({ message: "Veritabanı bağlantı hatası!" });
-  }
+        if (!results || results.length === 0) {
+            return res.status(401).send({ message: "Hatalı email veya şifre!" });
+        }
+
+        const user = results[0];
+        console.log("Bulunan kullanıcı:", user);
+
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        console.log("Şifre doğrulama sonucu:", isPasswordValid);
+
+        if (!isPasswordValid) {
+            return res.status(401).send({ message: "Hatalı email veya şifre!" });
+        }
+
+        const token = jwt.sign(
+            { username: user.username, email: user.email },
+            process.env.JWT_SECRET || "secret_key",
+            { expiresIn: "1h" }
+        );
+
+        res.status(200).send({ message: "Başarıyla giriş yapıldı!", token });
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({ message: "Sunucu hatası!" });
+    }
 });
 
 router.post("/register", async (req: Request, res: Response) => {
