@@ -44,14 +44,8 @@ router.post("/login", async (req: Request, res: Response) => {
             return res.status(401).send({ message: "Hatalı email veya şifre!" });
         }
 
-        const token = jwt.sign(
-            { username: user.username, email: user.email },
-            process.env.JWT_SECRET || "secret_key",
-            { expiresIn: "1h" }
-        );
-
+        const token = generateToken(user);
         res.status(200).send({ message: "Başarıyla giriş yapıldı!", token });
-
     } catch (error) {
         console.error(error);
         res.status(500).send({ message: "Sunucu hatası!" });
