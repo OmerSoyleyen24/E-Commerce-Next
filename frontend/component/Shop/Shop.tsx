@@ -1,8 +1,8 @@
 import React from "react";
-import Categories from "./Categories/Categories";
-import Products from "./Products/Products";
-import CampaignSingle from "./CampaignSingle/CampaignSingle";
-import Policy from "./Policy/Policy";
+import Categories from "@/component/Categories/Categories";
+import Products from "@/component/Products/Products";
+import CampaignSingle from "@/component/CampaignSingle/CampaignSingle";
+import Policy from "@/component/Policy/Policy";
 
 const Shop = () => {
     return (
