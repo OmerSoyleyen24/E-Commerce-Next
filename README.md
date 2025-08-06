@@ -1,42 +1,49 @@
-# E-Commerce Next.js
+🛍️ E-Commerce App – Next.js
+This is a fully functional e-commerce web application built with Next.js, featuring product listings, dynamic product detail pages, galleries, and basic cart management using React Context API.
 
-Bu proje, Next.js ile geliştirilmiş bir e-ticaret web uygulamasıdır. Ürün listeleme, detay sayfaları, ürün galeri ve kullanıcı etkileşimleri gibi temel e-ticaret özelliklerini içermektedir.
+🚀 Technologies Used
+Next.js 13 (App Router)
 
-## Teknolojiler
+React 18
 
-- Next.js 13 (App Router)
-- React 18
-- TypeScript
-- React Slick (slider)
-- CSS modülleri
-- JSON tabanlı ürün verisi
+TypeScript
 
-## Kurulum ve Çalıştırma
+React Slick (carousel/slider)
 
-```bash
+CSS Modules
+
+Static JSON data
+
+📦 Getting Started
+bash
+Kopyala
+Düzenle
 git clone https://github.com/OmerSoyleyen24/E-Commerce-Next.git
 cd E-Commerce-Next
 npm install
 npm run dev
-Tarayıcıda açın: http://localhost:3000
+Open your browser and navigate to:
+👉 http://localhost:3000
 
-Proje Özellikleri
-Dinamik ürün detay sayfaları (/productDetails/[id])
+💡 Features
+Dynamic product detail pages: /productDetails/[id]
 
-Ürün galerisi ve slider
+Image gallery and product sliders
 
-Sepet yönetimi React Context ile
+Shopping cart with React Context API
 
-Responsive tasarım
+Fully responsive design
 
-Statik JSON veri kullanımı
+Data fetched from static JSON files
 
-Katkıda Bulunma
-Pull request ve issue’lara açabilirsiniz.
+🤝 Contributing
+Contributions are welcome!
+Feel free to open issues or submit pull requests.
 
-Lisans
-MIT Lisansı
+📄 License
+This project is licensed under the MIT License.
 
+👤 Author
 Ömer Söyleyen
-GitHub: https://github.com/OmerSoyleyen24
-Email: omersoyleyen24@outlook.com
+🔗 GitHub
+📧 omersoyleyen24@outlook.com
