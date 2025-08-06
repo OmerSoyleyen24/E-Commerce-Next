@@ -1,5 +1,5 @@
 import React from "react"
-import Policy from "./Policy/Policy";
+import Policy from "@/component/Policy/Policy";
 import "./Contact.css"
 
 const Contact = () => {
