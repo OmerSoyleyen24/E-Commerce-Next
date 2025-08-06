@@ -1,4 +1,4 @@
-🛍️ E-Commerce App – Next.js
+E-Commerce App – Next.js
 This is a fully functional e-commerce web application built with Next.js, featuring product listings, dynamic product detail pages, galleries, and basic cart management using React Context API.
 
 🚀 Technologies Used
